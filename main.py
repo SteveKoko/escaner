@@ -21,7 +21,7 @@ while True:
             print("--------------")
     elif elec == "2":
         target = input("Introduce el equipo o la red a escanear: ")
-        escaneo.scan(target, arguments="-T5 -p-")
+        escaneo.scan(target, arguments="-sS -T5")
         for host in escaneo.all_hosts():
             for prot in escaneo[host].all_protocols():
                 for port in escaneo[host][prot].keys():
